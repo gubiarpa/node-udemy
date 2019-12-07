@@ -1,0 +1,10 @@
+*** Nodemon ***
+npm i nodemon
+    >   Instala el Nodemon
+
+nodemon app-01
+    >   Ejecuta el archivo app-01 en modo Watching
+
+*** var y let ***
+Se puede usar 'var' las veces que sea necesario y Javascript no respetará el ámbito.
+Cuando se usa 'let', se tiene un ámbito de declaración parecido a los lenguajes estrictos.
