@@ -1,8 +1,9 @@
 const fs = require("fs");
+const colors = require('colors');
 
-// const MAX_INDEX = 10;
+const MAX_INDEX = 20;
 
-let crearArchivo = (base) => {
+let crearArchivo = (base, limite = MAX_INDEX) => {
     return new Promise((resolve, reject) => {
 
         if (!Number(base)) {
@@ -12,7 +13,7 @@ let crearArchivo = (base) => {
 
         let data = ''; // Init
 
-        for (let i = 1; i <= 10; i++) {
+        for (let i = 1; i <= limite; i++) {
             data += `${ base } * ${ i } = ${ base * i }\n`;
         }
 
@@ -26,6 +27,32 @@ let crearArchivo = (base) => {
     });
 }
 
+let listarTabla = (base, limite = MAX_INDEX) => {
+    return new Promise((resolve, reject) => {
+
+        // Validación de errores
+        let errorsStr = '';
+        if (!Number(base)) errorsStr += `${ base } no es un número\n`;
+        if (!Number(limite)) errorsStr += `${ limite } no es un número\n`;
+        if (!(errorsStr == '')) {
+            reject(errorsStr); // No es un return
+            return;
+        }
+
+        // Una vez validado, imprime la tabla
+
+        console.log('*******************************'.green);
+        console.log(`         Tabla del ${ base }`.green);
+        console.log('*******************************'.green);
+
+        for (let i = 1; i <= limite; i++) {
+            console.log(`${ base } * ${ i } = ${ base * i }`);
+        }
+        resolve(`tabla-${ base }`);
+    });
+}
+
 module.exports = {
-    crearArchivo
+    crearArchivo,
+    listarTabla
 }
