@@ -8,3 +8,12 @@ nodemon app-01
 *** var y let ***
 Se puede usar 'var' las veces que sea necesario y Javascript no respetará el ámbito.
 Cuando se usa 'let', se tiene un ámbito de declaración parecido a los lenguajes estrictos.
+
+*** Archivo: package-lock.json ***
+Guarda un registro de todo lo que hizo para obtener los paquetes en package.json
+
+*** Archivo: package.json ***
+Guarda todas las dependencias del proyecto
+
+*** node_modules ***
+Guarda todos los paquetes que tenga el desarrollo.
