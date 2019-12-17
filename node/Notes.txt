@@ -16,4 +16,5 @@ Guarda un registro de todo lo que hizo para obtener los paquetes en package.json
 Guarda todas las dependencias del proyecto
 
 *** node_modules ***
+npm install underscore --save
 Guarda todos los paquetes que tenga el desarrollo.

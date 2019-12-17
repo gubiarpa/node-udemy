@@ -9,4 +9,5 @@ const argv = require('yargs').options({
 }).argv;
 
 lugar.getLugarLatLon(argv.direccion)
-    .then(console.log);
+    .then(console.log)
+    .catch(console.log);

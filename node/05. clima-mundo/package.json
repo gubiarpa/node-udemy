@@ -1,7 +1,7 @@
 {
   "name": "05.-clima-mundo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Aplicación para ver el clima del mundo",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.0",
+    "underscore": "^1.9.1",
     "yargs": "^15.0.2"
   }
 }
