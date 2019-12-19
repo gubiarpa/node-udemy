@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 
 const hbs = require('hbs');
+
+const port = process.env.PORT || 3000;
+
 require('./hbs/helpers'); // no es necesario asignarlo a una constante porque contiene ejecuciones
 
 app.use(express.static(__dirname + '/public'));
@@ -12,7 +15,7 @@ app.set('view engine', 'hbs');
 
 app.get('/', (req, res) => {
     res.render('home', {
-        nombre: 'billy arredondo palomino',
+        nombre: 'billy arredondo',
         anio: new Date().getFullYear()
     })
 });
@@ -26,8 +29,6 @@ app.get('/about', (req, res) => {
 app.get('/data', (req, res) => {
     res.send('Hello Data')
 });
-
-const port = 3006;
 
 app.listen(port, () => {
     console.log(`Escuchando peticiones en el puerto ${ port }`);

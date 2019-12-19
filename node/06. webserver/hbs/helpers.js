@@ -1,13 +1,11 @@
-const hbs = require('hbs');
-
 // Helpers
+
+const hbs = require('hbs'); // son ejecuciones no definiciones
+
 hbs.registerHelper('getAnio', () => {
     return new Date().getFullYear();
 });
 
-hbs.registerHelper('capitalizar', texto => texto.toUpperCase());
-
-/*
 hbs.registerHelper('capitalizar', (texto) => {
     let palabras = texto.split(' ');
     palabras.forEach((palabra, idx) => {
@@ -15,4 +13,3 @@ hbs.registerHelper('capitalizar', (texto) => {
     });
     return palabras.join(' ');
 });
-*/
