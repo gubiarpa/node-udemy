@@ -1,5 +1,12 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+
+// parse application/x-www-form-encoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
     res.json('Hello World')
@@ -10,7 +17,16 @@ app.get('/usuario', function(req, res) {
 });
 
 app.post('/usuario', function(req, res) {
-    res.json('PostUsuario')
+    let body = req.body; // se obtiene el body de la petición
+    res.json({ persona: body })
+});
+
+app.put('/usuario/:id', function(req, res) {
+    let id = req.params.id;
+
+    res.json({
+        id
+    })
 });
 
 app.listen(3000, () => {
