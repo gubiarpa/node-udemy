@@ -12,13 +12,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(require('./routes/usuario'));
+app.use(require('./routes/usuario')); // importamos las rutas (routes)
 
 app.get('/', function(req, res) {
     res.json('Hello World')
 });
 
-mongoose.connect(`mongodb://localhost:27017/cafe`, (err) => {
+mongoose.connect(`mongodb://localhost:27017/cafe`, (err, res) => {
     if (err) throw err;
     console.log(`Base de datos Online`);
 });
