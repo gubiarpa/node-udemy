@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
+    // validación user friendly
 
 let Schema = mongoose.Schema;
 

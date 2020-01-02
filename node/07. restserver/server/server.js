@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.use(require('./routes/usuario')); // importamos las rutas (routes)
+app.use(require('./routes/usuario')); // importamos la ruta (routes) del Usuario
 
 app.get('/', function(req, res) {
     res.json('Hello World')
