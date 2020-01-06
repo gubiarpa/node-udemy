@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const uniqueValidator = require('mongoose-unique-validator');
-    // validación user friendly
+const uniqueValidator = require('mongoose-unique-validator'); // validación user friendly
 
 let Schema = mongoose.Schema;
 
@@ -33,7 +32,7 @@ let usuarioSchema = new Schema({
     google: {
         type: Boolean,
         default: false
-    } // Boolean
+    }
 });
 
 usuarioSchema.plugin(uniqueValidator, { message: '{PATH} debe de ser único' });
